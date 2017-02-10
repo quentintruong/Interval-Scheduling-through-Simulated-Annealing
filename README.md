@@ -1,2 +1,2 @@
 # Interval-Scheduling
-Accepts requests for intervals of time at various times, optimizes for maximum amount of time, sends e-mails
+Optimizes requests for intervals of time, sends e-mails; gForms/Sheets/Scripts
