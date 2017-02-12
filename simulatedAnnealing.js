@@ -286,11 +286,9 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
 {
     const REPEAT_SIMULATION_TIMES = 1000;
   
-  for(var i = 0; i < printingTimes.length; i++){
-    printingTimes[i] = parseInt(printingTimes[i]);
-  }
-  
-  
+    for(var i = 0; i < printingTimes.length; i++){
+        printingTimes[i] = parseInt(printingTimes[i]);
+    }
 
     //Helper Variables
     var nJobs = printingTimes.length;
@@ -314,10 +312,8 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
     var latestPrintEndingTimes = [];
     for(var i = 0; i < nJobs; i++){
         for(var j = 23; j >= 0; j--){
-            
             if(possibilities[i][j] === true){
                 latestPrintEndingTimes[i] = j + printingTimes[i];
-              //Logger.log(j+printingTimes[i]);
                 break;
             }
         }
@@ -359,12 +355,10 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
         return currentResult;
     }
 
-    //console.log(valueOfResult(currentResult, printingTimes, emails));
 
     //Simulated annealing algorithm to determine more optimal solution
     //Here we go! 
     
-
     var bestResult = [];
     for(var i = 0; i < currentResult.length; i++){
         bestResult[i] = [];
@@ -389,26 +383,15 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
         //If -1, remove the job instead
         possiblePermutations.push(-1);
 
-        //console.log("Which job: " + emails[whichJob]);
-
-        //console.log("possible moves: " + possiblePermutations);
-
         var option = getRandomInt(0, possiblePermutations.length);
-
-
         var timeOfJob = currentResult[0].indexOf(emails[whichJob]);
 
         //Remove job!
         if(possiblePermutations[option] === -1){
-            //console.log("removing job " + emails[whichJob]);
             if(timeOfJob !== -1){
                 currentResult[0][timeOfJob] = "";
             }
         }
-
-        
-        //console.log("Where to put it: " + possiblePermutations[option]);
-
 
         //Otherwise, move job to new position
         if(currentResult[0].indexOf(emails[whichJob]) !== -1){
@@ -426,26 +409,15 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
         for(var i = 0; i < 24; i++){
             if(currentResult[0][i] !== ""){
                 var maybeDeleteJob = currentResult[0][i];
-                //console.log("maybe delete job " + currentResult[0][i]);
-                //console.log("Printing time of this job " + printingTimes[emails.indexOf(maybeDeleteJob)]);
-
+        
                 for(var j = i+1; j < printingTimes[emails.indexOf(maybeDeleteJob)]+i && j < 24; j++){
                     if(currentResult[0][j] !== ""){
-                        //console.log("deleting job " + currentResult[0][i]);
                         currentResult[0][i] = "";
                         break;
                     }
                 }
             }
         }
-
-        Logger.log("current: " + valueOfResult(currentResult, printingTimes, emails));
-        printResult(currentResult);
-
-        Logger.log("best: " + valueOfResult(bestResult, printingTimes, emails));
-        printResult(bestResult);
-
-            //printResult(currentResult);
 
         if(valueOfResult(currentResult, printingTimes, emails) > valueOfResult(bestResult, printingTimes, emails)){
             copyArray(bestResult, currentResult);
@@ -456,14 +428,9 @@ function scheduleTimes(possibilities, printingTimes, emails, numPrinters)
             copyArray(currentResult, bestResult);
         }
 
-        //console.log();
-        
-
     }
-
-    //console.log("best: " + valueOfResult(bestResult, printingTimes, emails));
-    //printResult(bestResult);
-  Logger.log(bestResult[0]);
+    
+    Logger.log(bestResult[0]);
     return bestResult;
 
 }
@@ -529,20 +496,8 @@ function acceptProposal(current, best, maxPossibleValue, printingTimes, emails){
     if(valueOfResult(current, printingTimes, emails) === maxPossibleValue)
         return true;
 
-    //Method by Kirkpatrick et al.
+    //Metropolis Algorithm, maxPossibleValue should be modified?
     var prob = Math.exp(-(valueOfResult(best, printingTimes, emails)-valueOfResult(current, printingTimes, emails))/maxPossibleValue);
-
-    //console.log(-(valueOfResult(current, printingTimes, emails)));
     return prob > Math.random();
 }
-
-
-
-
-
-
-
-
-
-
 
