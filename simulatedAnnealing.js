@@ -1,13 +1,3 @@
-//~~~Sheet Structure~~~
-//A                  B                         C            D               E               F                  G                 H
-//Timestamp          Email Address             Length       Day 0 Times     Day 1 Times     Day 2 Times        Satisfied (y/n)   Given Date/Time   
-//
-//~~~Sample Input Data~~~
-//2/11/2017 9:10:26  quentintruong@gmail.com   5            8               11-12           8-13, 19-21     
-//
-//~~~Interface~~~
-//gForm, e-mail
-//
 //~~~Reminders~~~
 //deal w/ trailing spaces
 //deal w only 1 day of data vs 2 or 3 days of data
