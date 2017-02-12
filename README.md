@@ -1,6 +1,10 @@
 # Interval Scheduling through Simulated Annealing
 
-Achieves a near-optimal schedule of variable-length, variable-starttime, and conflicting events through greedy schedulign algorithms and simulated annealing algorithms. Communicates with Google Spreadsheets to receive/send input/output data and sends e-mails to users. Triggers functions through Google API's.
+Achieves a near-optimal schedule of variable-length, variable-starttime, and conflicting events through greedy schedulign algorithms and simulated annealing algorithms. 
+
+Communicates with Google Spreadsheets to receive/send input/output data and sends e-mails to users. 
+
+Triggers functions through Google API's.
 ---
 ###Sheet Structure
 | A          | B              | C     | D          | E           | F           | G             |H
@@ -13,7 +17,7 @@ gForm, e-mail
 ---
 ###Sample Test Data
 
-| A                | B              | C  | D  | E                       | F   G   |
+| A                | B              | C  | D  | E                       | F  | G  |
 |------------------|:---------------|:---|:---|:------------------------|:---|:---|
 | 2/11/2017 9:10:26|address1        |    |    |8, 9, 19, 20, 21, 22     |    |    |
 | 2/11/2017 9:10:26|address2        |    |    |8, 12, 19, 20            |    |    |
