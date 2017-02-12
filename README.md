@@ -1,6 +1,6 @@
 # Interval Scheduling through Simulated Annealing
 
-Achieves a near-optimal schedule of variable-length, variable-starttime, and conflicting events through greedy schedulign algorithms and simulated annealing algorithms. 
+Schedules conflicting, variable-length events with multiple possible start times to achieve near-optimal use of time, using simulated annealing and greedy algorithms. 
 
 Communicates with Google Spreadsheets to receive/send input/output data and sends e-mails to users. 
 
