@@ -21,3 +21,5 @@ Triggers functions through Google API's.
 | 2/11/2017 9:10:26|address3        |    |    |8, 13, 14, 18, 19, 20, 21|    |    |
 | 2/11/2017 9:10:26|address4        |    |    |8, 9, 10, 11, 20, 21, 22 |    |    |
 | 2/11/2017 9:10:26|address5        |    |    |8, 9, 13, 14, 15, 16, 17 |    |    |
+
+Visualization of test data available here: https://goo.gl/fWE2i1
