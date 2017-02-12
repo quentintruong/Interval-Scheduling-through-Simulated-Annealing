@@ -5,15 +5,12 @@ Achieves a near-optimal schedule of variable-length, variable-starttime, and con
 Communicates with Google Spreadsheets to receive/send input/output data and sends e-mails to users. 
 
 Triggers functions through Google API's.
+
 ---
 ###Sheet Structure
 | A          | B              | C     | D          | E           | F           | G             |H
 |------------|:---------------|:------|:-----------|:------------|:------------|:--------------|:--------------|
 | Timestamp  |Email Address   | Length| Day 0 Times| Day 1 Times | Day 2 Times |Satisfied (y/n)|Given Date/Time|   
----
-###Interface
-gForm, e-mail
-
 ---
 ###Sample Test Data
 
