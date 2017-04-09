@@ -7,12 +7,13 @@ Communicates with Google Spreadsheets to receive/send input/output data and send
 Triggers functions through Google API's.
 
 ---
-###Sheet Structure
-| A          | B              | C     | D          | E           | F           | G             |H
+### Sheet Structure
+| A          | B              | C     | D          | E           | F           | G             |H              |
 |------------|:---------------|:------|:-----------|:------------|:------------|:--------------|:--------------|
-| Timestamp  |Email Address   | Length| Day 0 Times| Day 1 Times | Day 2 Times |Satisfied (y/n)|Given Date/Time|   
+| Timestamp  |Email Address   | Length| Day 0 Times| Day 1 Times | Day 2 Times |Satisfied (y/n)|Given Date/Time|  
+
 ---
-###Sample Test Data
+### Sample Test Data
 
 | A                | B              | C  | D  | E                       | F  | G  |
 |------------------|:---------------|:---|:---|:------------------------|:---|:---|
