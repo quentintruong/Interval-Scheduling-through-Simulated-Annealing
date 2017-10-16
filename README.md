@@ -24,3 +24,9 @@ Triggers functions through Google API's.
 | 2/11/2017 9:10:26|address5        |    |    |8, 9, 13, 14, 15, 16, 17 |    |    |
 
 Visualization of test data available here: https://goo.gl/fWE2i1
+
+---
+### Demo
+![comparison.jpg](/demo/comparison.jpg?raw=true "Comparison between simulated annealing algorithm and a brute force algorithm. Optimization is increased by 6% with the same amount of time used.")
+
+This is a comparison between the simulated annealing algorithm and a brute force algorithm. Optimization is increased by 6% with the same amount of time used.
